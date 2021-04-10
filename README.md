@@ -12,29 +12,34 @@
 
 To setup a Laravel Project You Cloned from Github.com you need to do following steps. 
 
-1. Install Composer Dependencies::composer install
+1. Install Composer Dependencies<br>  composer install
 
-2. Install NPM Dependencies::npm install
+2. Install NPM Dependencies<br>  npm install
 
-3. Create a copy of your .env file::cp .env.example .env
+3. Create a copy of your .env file<br>  cp .env.example .env
 
-4. Generate an app encryption key::php artisan key:generate
+4. Generate an app encryption key<br>  php artisan key:generate
 
 5. In the .env file, add database information to allow Laravel to connect to the database
 We will want to allow Laravel to connect to the database that you just created in the previous step. To do this, we must add the connection credentials in the .env file and Laravel will handle the connection from there.
 
-In the .env file fill in the DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, and DB_PASSWORD options to match the credentials of the database you just created. This will allow us to run migrations and seed the database in the next step.
+In the .env file fill in the DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, and DB_PASSWORD options to match the credentials of the database you just created. This will allow us to run migrations and seed the database in the next step.<br>
 
-This is my example:
-DB_CONNECTION=pgsql
-DB_HOST=127.0.0.1
-DB_PORT=5432
-DB_DATABASE=blog
-DB_USERNAME=postgres
-DB_PASSWORD=1nikolas
+This is my example:<br>
+DB_CONNECTION=pgsql<br>
+DB_HOST=127.0.0.1<br>
+DB_PORT=5432<br>
+DB_DATABASE=blog<br>
+DB_USERNAME=postgres<br>
+DB_PASSWORD=1nikolas<br>
 
-6. Migrate the database::php artisan migrate
 
-7. [Optional]: Seed the database::php artisan db:seed
+6. Migrate the database<br>  php artisan migrate
+
+7. Seed the database<br>  php artisan db:seed<br>
+This final step is creating ADMIN user in database. ADMIN email address is admin@gmail.com and password is admin.<br>
+
+8.Create links for images folder  
+php artisan storage:link
 
 
